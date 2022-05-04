@@ -3,16 +3,13 @@ import tensorflow_hub as hub
 import tensorflow_text as text 
 from official.nlp import optimization  # to create AdamW optimizer
 import tensorflow.keras.backend as K
-import os
 
-#   RESOLVE WARNINGS
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+class Model:
 
-
-class model:
-
-    def __init__(self,):
+    def __init__(self):
         
+      
+
         #   MODEL HYPERPARAMETERS
         self.epochs = 1
         #   TODO: FIX THIS LINE
@@ -32,7 +29,7 @@ class model:
         return K.mean(K.maximum(q*e, (q-1)*e), axis=-1)
 
     #   ADAM OPTIMIZER 
-    def getOpt(self,):
+    def getOpt(self):
         
         return optimization.create_optimizer(init_lr=self.init_lr,
                                             num_train_steps=self.num_train_steps,
@@ -40,8 +37,9 @@ class model:
                                             optimizer_type='adamw')
 
     #   LOAD AND RETURN MODEL
-    def getModel(self,):
+    def getModel(self):
         model=tf.keras.models.load_model(
             self.model_path,
             custom_objects={'AdamWeightDecay':self.getOpt(),'tilted_loss':self.tilted_loss}
             )
+        return model

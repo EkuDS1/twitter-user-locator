@@ -1,14 +1,26 @@
 from flask import Flask
+from twitterAPI import API
+from loc_model import Model
+from util import *
 
 
 app = Flask(__name__)
 
+  
 
 @app.route("/")
 def hello_world():
-    return summary()
 
-def summary():
-    cod=model.predict(text)
-    concat="<p>"+str(cod[0])+str(cod[1])+"</p>"
+    api= API()
+    m=Model()
+    model=m.getModel()
+
+    api.setUsername("PTIofficial")
+    api.search()
+
+    text=preprocess_tweets()
+
+    c=model.predict(text)
+    concat="<p>"+str(c[0][0])+str(c[0][1])+"</p>"
     return concat 
+
