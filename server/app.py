@@ -21,6 +21,7 @@ def hello_world():
     text=preprocess_tweets()
 
     c=model.predict(text)
-    concat="<p>"+str(c[0][0])+str(c[0][1])+"</p>"
+    geoxml=reverseGeocode(c[0][0],c[0][1])
+    concat="<p>"+geoxml+"</p>"
     return concat 
 

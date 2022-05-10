@@ -1,6 +1,8 @@
+from lib2to3.pytree import convert
 import pandas as pd
 import tensorflow as tf
 import string
+import requests 
 
 AUTOTUNE = tf.data.AUTOTUNE
 #   CONFIGURES DATASET FOR PERFORMANCE 
@@ -19,3 +21,8 @@ def preprocess_tweets():
     
     return text_ds.batch(10)
 
+def reverseGeocode(lat,lng):
+    url=f"http://api.geonames.org/findNearbyPlaceName?lat={lat}&lng={lng}&username=vinxi"
+   
+    response=requests.get(url)
+    return response.text
