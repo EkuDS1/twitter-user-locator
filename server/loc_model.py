@@ -3,7 +3,7 @@ import tensorflow_hub as hub
 import tensorflow_text as text 
 from official.nlp import optimization  # to create AdamW optimizer
 import tensorflow.keras.backend as K
-
+import os; os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1' 
 class Model:
 
     def __init__(self):

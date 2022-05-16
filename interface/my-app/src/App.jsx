@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useEffect,useState } from 'react';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import Home from './Home'
@@ -8,11 +8,11 @@ import Contact from './Contact'
 import Navbar from './Navbar';
 import {BrowserRouter as Router,Redirect, Switch, Route} from  'react-router-dom';
 
-
 const App = () => {
 	
 	return (
 		<>
+		
 		<Router>
 		<Navbar/>
 			<Switch>	
@@ -23,6 +23,7 @@ const App = () => {
 				<Redirect to = "/" /> 
 			</Switch>
 		</Router>
+		
 		</>
 	);
 }
