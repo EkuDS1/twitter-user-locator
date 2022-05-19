@@ -15,10 +15,15 @@ const Home = () => {
 
   return (
     <div>
-      
-      <h1>🔴 Home Page</h1>
-      <p>{JSON.stringify(getMessage.data)}</p>
-    </div>
+		<form>
+			<label>
+				Username:	
+				<input type="text" name="username"/>
+			</label>
+		</form>
+	</div>
+
+    
   );
 }
 
