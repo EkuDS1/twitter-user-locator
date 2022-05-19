@@ -3,10 +3,10 @@ import React from 'react';
 /* withRouter is used for exporting the default if 
 if exporting variable create issue use withRouter */
 import Card from './card';
-import imgData from "./imgData.jsx"
+import * as myConst from "../sources/Constants.jsx"
 
 // Card created for the services
-const outputCard = imgData.map((val)=>{
+const outputCard = myConst.imgData.map((val)=>{
     return <>{<Card 
       title = {val.title}
       imgsrc = {val.imgsrc}/>}</>;

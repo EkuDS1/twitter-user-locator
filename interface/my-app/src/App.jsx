@@ -1,11 +1,11 @@
 import React from 'react';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
-import Home from './Home'
-import Service from './Service'
-import About from './About'
-import Contact from './Contact'
-import Navbar from './Navbar';
+import Home from './Home.jsx'
+import Service from './Services_Page/Service.jsx'
+import About from './About_Page/About.jsx'
+import Contact from './Contact_Page/Contact.jsx'
+import Navbar from './Navbar.jsx';
 import {BrowserRouter as Router,Redirect, Switch, Route} from  'react-router-dom';
 
 const App = () => {

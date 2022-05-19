@@ -5,7 +5,7 @@ import React from "react";
  change if required*/
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
-import './index.css';
+import './CSS/index.css';
 
 const Navbar = () =>{
     return(

@@ -1,6 +1,5 @@
 import React from 'react';
-import {withRouter} from "react-router-dom"
-import web1 from  '../src/images/s1.jpg'
+// import {withRouter} from "react-router-dom"
 
 const Card = (props) => {
   return (
@@ -13,7 +12,7 @@ const Card = (props) => {
                   <p className ="card-text">
                   </p>
                   <a href='#' className = "btn btn-primary">
-                    link added
+                    Locate
                   </a>
                 </div>                
             </div>
