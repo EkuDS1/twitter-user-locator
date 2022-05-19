@@ -1,7 +1,7 @@
 import React from "react"; 
 /* import Navbar from 'react-bootstrap/Navbar';
  i replaced a tag with Navbar.Brand it worked 
- than but it works now as well with a tag
+ than but it works now as well with "a" tag
  change if required*/
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
@@ -16,7 +16,7 @@ const Navbar = () =>{
                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
                         <div className="container-fluid">
                             <a 
-                            className="navbar-brand" 
+                            className="navbar-brand checking" 
                             href="/">
                                 LET's  LOCATE
                             </a>
