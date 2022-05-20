@@ -1,4 +1,4 @@
-import {withRouter} from "react-router-dom";
+// import {withRouter} from "react-router-dom";
 import axios from 'axios'
 import React,{ useEffect,useState } from 'react';
 
@@ -40,4 +40,4 @@ const Home = () => {
   );
 }
 
-export default withRouter(Home);
+export default Home;
