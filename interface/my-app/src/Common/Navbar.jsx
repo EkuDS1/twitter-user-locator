@@ -3,9 +3,9 @@ import React from "react";
  i replaced a tag with Navbar.Brand it worked 
  than but it works now as well with "a" tag
  change if required*/
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
-import './CSS/index.css';
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../../node_modules/bootstrap/dist/js/bootstrap.bundle";
+import '../CSS/index.css';
 
 const Navbar = () =>{
     return(

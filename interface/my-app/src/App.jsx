@@ -5,7 +5,8 @@ import Home from './Home.jsx'
 import Service from './Services_Page/Service.jsx'
 import About from './About_Page/About.jsx'
 import Contact from './Contact_Page/Contact.jsx'
-import Navbar from './Navbar.jsx';
+import Navbar from './Common/Navbar.jsx';
+import Footer from './Common/Footer.jsx';
 import {BrowserRouter as Router,Redirect, Switch, Route} from  'react-router-dom';
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
 				<Route exact path='/contact' component = {Contact}></Route>
 				<Redirect to = "/" /> 
 			</Switch>
+			<Footer />
 		</Router>
 		
 		</>
