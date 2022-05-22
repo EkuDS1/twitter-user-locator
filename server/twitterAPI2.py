@@ -19,11 +19,12 @@ class TwitterAPI:
         self.c.Username="nakedskincareaz"   #   USERNAME TO RETRIEVE TWEETS 
 
     def search(self):
+        self.c.Search="covid"
         twint.run.Search(self.c)    # COMMENCE SEARCH
 
 
 if __name__=="__main__":
     Ta=TwitterAPI()
-    Ta.setUsername("")
+    # Ta.setUsername("")
     Ta.search()
 
