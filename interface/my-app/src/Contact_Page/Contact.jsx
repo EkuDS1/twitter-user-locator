@@ -45,7 +45,6 @@ const Contact = () => {
               id="exampleFormControlTextarea1" 
               rows="3"
               name = 'message'
-              value={data.message}
               onChange = {InputEvent}
               />
             </div>
