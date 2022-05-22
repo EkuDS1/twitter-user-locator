@@ -11,8 +11,8 @@ const Card = (props) => {
                   <h5 className = "card-title font-weight-bold">{props.title}</h5>
                   <p className ="card-text">
                   </p>
-                  <a href='#' className = "btn btn-primary">
-                    Locate
+                  <a href="/" className = "btn btn-primary">
+                    Track Down
                   </a>
                 </div>                
             </div>

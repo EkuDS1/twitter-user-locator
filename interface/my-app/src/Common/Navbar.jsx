@@ -6,25 +6,26 @@ import React from "react";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import '../CSS/index.css';
-
+import * as myConst from '../sources/Constants'
 const style = {
-    backgroundColor: "#75838c",
-    color: "white"
+    backgroundColor: "#0f5482",
+}
+const stylee= {
+    color: "white",
 }
 
 const Navbar = () =>{
     return(
         <>
             <div className="container-fluid nav_bg" style={style} >
-                <div className="row" style={style}>
-                    <div className="col-10 mx-auto" style={style}>
-                    <nav className="navbar navbar-expand-lg navbar-light" style={style}>
-                        <div className="container-fluid" style={style} >
+                <div className="row" >
+                    <div className="col-10 mx-auto">
+                    <nav className="navbar navbar-expand-lg navbar-light">
+                        <div className="container-fluid" >
                             <a 
-                            className="navbar-brand"  style={style}
                             href="/">
-                                LET's  LOCATE
-                            </a>
+                                <img  width="70" height="60" src = {myConst.icon_img}/>
+                            </a> <h5 style={stylee}>LET's LOCATE</h5> 
                             <button className="navbar-toggler" 
                             type="button" 
                             data-bs-toggle="collapse" 
@@ -35,33 +36,33 @@ const Navbar = () =>{
                             <span className="navbar-toggler-icon"></span>
                             </button>
                             <div className="collapse navbar-collapse" id="navbarSupportedContent" style={style}>
-                            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <ul className="navbar-nav ms-auto mb-2 mb-lg-0" >
                                 <li className="nav-item">
                                     <a activeClassName = ' ' 
                                     className="nav-link active" 
                                     aria-current="page" 
-                                    href="/">
+                                    href="/" style={stylee}>
                                         Home
                                     </a>
                                 </li>
                                 <li className="nav-item">
                                     <a activeClassName = ' ' 
                                     className="nav-link" 
-                                    href="/service">
+                                    href="/service" style={stylee}>
                                         Services
                                     </a>
                                 </li>
                                 <li className="nav-item">
                                     <a activeClassName = ' ' 
                                     className="nav-link" 
-                                    href="/contact">
+                                    href="/contact" style={stylee}>
                                         Contact
                                     </a>
                                 </li>
                                 <li className="nav-item">
                                     <a activeClassName = ' ' 
                                     className="nav-link"
-                                    href="/about">
+                                    href="/about" style={stylee}>
                                         About
                                     </a>
                                 </li>

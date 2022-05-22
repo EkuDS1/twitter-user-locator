@@ -35,12 +35,15 @@ const Home = () => {
 		
 	}
 
+const style = {
+	backgroundColor: "white"
+}
   return (
     <div >
 		<form  onSubmit = {handleSubmit}>
 
 			<div className="example">
-				<input name="search" placeholder="Search" className="searchBox" type="text" onChange={(e)=>setUsername(e.target.value)}/>			
+				<input name="search" style = {style} placeholder="Search" className="searchBox" type="text" onChange={(e)=>setUsername(e.target.value)}/>			
   				<button type="submit"><i class="fa fa-search"></i></button>
 			</div>
 			<MapView ref={mapref} lat={getCoordinates.lat} long={getCoordinates.long}></MapView>
