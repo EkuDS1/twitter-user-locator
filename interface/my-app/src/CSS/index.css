@@ -6,8 +6,8 @@
     font-family: "muli", sans-serif;
 }
 
-<<<<<<< HEAD
-=======
+ 
+
 /* Style the search field */
 div.example input[type=text] {
     padding: 10px;
@@ -54,7 +54,6 @@ div.example input[type=text] {
     margin:0;
     padding:0;
     }
->>>>>>> 42b7f4da1e21ce3065a521f6b9933488a0b1eafc
 .wrapper {
     min-height: 100vh;
     display: flex;
@@ -64,18 +63,17 @@ div.example input[type=text] {
     align-items: center;
 }
 
-<<<<<<< HEAD
 .searchBox {
     width: 550px;
     height: 35px;
     border-radius: 25px;
     padding: 20px
 }
-=======
+
 .searchBox{
     width:300px;
     height: 35px;
->>>>>>> 42b7f4da1e21ce3065a521f6b9933488a0b1eafc
+
 
 }
 .example{
