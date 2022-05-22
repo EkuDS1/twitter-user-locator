@@ -7,16 +7,21 @@ import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import '../CSS/index.css';
 
+const style = {
+    backgroundColor: "#75838c",
+    color: "white"
+}
+
 const Navbar = () =>{
     return(
         <>
-            <div className="container-fluid nav_bg">
-                <div className="row">
-                    <div className="col-10 mx-auto">
-                    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                        <div className="container-fluid">
+            <div className="container-fluid nav_bg" style={style} >
+                <div className="row" style={style}>
+                    <div className="col-10 mx-auto" style={style}>
+                    <nav className="navbar navbar-expand-lg navbar-light" style={style}>
+                        <div className="container-fluid" style={style} >
                             <a 
-                            className="navbar-brand checking" 
+                            className="navbar-brand"  style={style}
                             href="/">
                                 LET's  LOCATE
                             </a>
@@ -29,7 +34,7 @@ const Navbar = () =>{
                             aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                             </button>
-                            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                            <div className="collapse navbar-collapse" id="navbarSupportedContent" style={style}>
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
                                     <a activeClassName = ' ' 

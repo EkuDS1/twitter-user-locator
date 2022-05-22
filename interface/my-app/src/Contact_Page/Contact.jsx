@@ -13,6 +13,9 @@ const OutputContactfields = myConst.ContactFields.map((val)=>{
     placeholder = {val.placeholder}/>}</>);
 });
 
+const style = {
+  body :"grey"
+}
 const Contact = () => {
 
   const [data, setData] = useState({
@@ -28,7 +31,7 @@ const Contact = () => {
     return ( 
       <>
       <div className='my-5'>
-        <h1 className='text-center'> Contact US</h1>
+        <h1 className='text-center'> Contact Us</h1>
       </div>
       <div className='container contact_div'>
         <div className='row'>
