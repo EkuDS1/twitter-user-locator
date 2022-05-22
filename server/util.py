@@ -3,6 +3,7 @@ import pandas as pd
 import tensorflow as tf
 import string
 import requests 
+import json
 
 AUTOTUNE = tf.data.AUTOTUNE
 #   CONFIGURES DATASET FOR PERFORMANCE 
@@ -23,3 +24,14 @@ def reverseGeocode(lat,lng):
    
     response=requests.get(url)
     return response.text
+
+def forwardGeocode(country):
+  access_token="pk.eyJ1IjoidmluLXhpIiwiYSI6ImNrejExcnZ0NDBhMW0ydnBxeGw3MnV0M3oifQ.jWgYBYCLnKdiZOdzfoZzhA"
+  url=f"https://api.mapbox.com/geocoding/v5/mapbox.places/{country}.json?limit=1&access_token={access_token}"
+  response=requests.get(url)
+  response=response.content.decode('utf-8')
+  response=json.loads(response)
+  # print(response.features.geometry)
+  features=response["features"]
+  return features[0]["center"]
+  

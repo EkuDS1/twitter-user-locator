@@ -2,6 +2,7 @@ import React from 'react';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import Home from './Home.jsx'
+import Map from './Map.jsx'
 import Service from './Services_Page/Service.jsx'
 import About from './About_Page/About.jsx'
 import Contact from './Contact_Page/Contact.jsx'
@@ -21,6 +22,7 @@ const App = () => {
 				<Route exact path='/about' component = {About}></Route>
 				<Route exact path='/service' component = {Service}></Route>
 				<Route exact path='/contact' component = {Contact}></Route>
+				<Route exact path='/map' component = {Map}></Route>
 				<Redirect to = "/" /> 
 			</Switch>
 			<Footer />

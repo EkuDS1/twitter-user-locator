@@ -13,10 +13,12 @@ class APIHandler(Resource):
         loc,df=self.Tapi.collectData(username)        #   RETRIEVE 50 TWEETS OF MENTIONED USER
         text=preprocess_tweets(df)
 
-        c=self.model.predict(text)                    
-        d=c[0].tolist()                               #   CONVERT TO LIST FOR SERIALIZATION
-        geoxml=reverseGeocode(d[0],d[1])              #   CONVERT TO COUNTRY
-        concat={"lat":d[0],"long":d[1],"location":loc}
+        # c=self.model.predict(text)                    
+        # d=c[0].tolist()                               #   CONVERT TO LIST FOR SERIALIZATION
+        # geoxml=reverseGeocode(d[0],d[1])              #   CONVERT TO COUNTRY
+        coord=forwardGeocode(loc)
+        
+        concat={"lat":coord[0],"long":coord[1],"location":loc}
         return concat 
 
     
